@@ -2,26 +2,101 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #e74c3c;
+  animation: bg-color 10s infinite;
+}
+@keyframes bg-color {
+  40% { background-color: #1abc9c; }
+  60% { background-color: #3498db; }
+  80% { background-color: #9b59b6; }
+
+}
+
+p {
+  font-family: Meiryo, "Hiragino Kaku Gothic Pro W3",sans-serif;
+  text-align: center;
+  margin-top: 150px;
+  color: #fff;
+}
+nav{
+  background-color: wheat;
+  height: 50px;
+}
+.bibleContainer{
+  border-radius: 20px;
+  position: relative;
+
+  
+}
+
+#introImage{
+  position: absolute;
+  width: 100%;
+  overflow: auto;
+  height: 400px;
+  opacity: 0.7;
+ 
+
+}
+#introImage:hover{
+  position: absolute;
+  width: 100%;
+  overflow: auto;
+  height: 400px;
+  opacity: 1;
+  cursor: pointer;
+
+
+}
+#Intro{
+  color: white;
+  font-weight: bolder;
+  position: absolute;
+  font-size: 45px;
+  margin-top: 250px;
+  padding: 10px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  
+}
+#Intro2{
+  color: white;
+  font-weight: 600px;
+  position: absolute;
+  font-size: 45px;
+  margin-top: 300px;
+  padding: 10px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  
+}
+#Intro3{
+  color: white;
+  font-weight: 600px;
+  position: absolute;
+  font-size: 30px;
+  margin: 20px;
+  margin-top: 600px;
+  padding: 10px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  
+}
+#Intro4{
+  color: white;
+  font-weight: 600px;
+  position: absolute;
+  font-size: 30px;
+  margin: 20px;
+  margin-top: 500px;
+  padding: 10px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  
+}
+
+#About{
+margin-top: 300px;
+margin-right: 400px;
+ width: 400px;
+
+
 }
