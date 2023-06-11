@@ -4,7 +4,7 @@ export default function nav(){
         <div>
               <nav>
                 <a href ='#About'> About</a>
-                <a href = '#'>Github</a>
+                <a href = '#Intro5'>User Story</a>
               </nav>
         </div>
     )
