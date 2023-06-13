@@ -227,6 +227,45 @@ padding: 2px;
   opacity: 1;
 
  }
+
+
+ .musicContainer{
+  display: block;
+  float: right;
+  margin: 20px;
+  background-color: lightslategray;
+  opacity: 0.7;
+  border-radius: 20px;
+
+
+ }
+ .musicContainer:hover{
+  display: block;
+  float: right;
+  margin: 20px;
+  background-color: lightgrey;
+  cursor: pointer;
+  opacity: 1;
+
+
+ }
+
+
+ #musicImage{
+  width: 200px;
+  height: 200px;
+ }
+
+ #name{
+  color: white;
+ text-align: center;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+ }
+ #episode{
+  color: white;
+  text-align: center;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+ }
  
  @media screen and (max-width: 600px) {
   #introImage{
