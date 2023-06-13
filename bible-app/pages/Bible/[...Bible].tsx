@@ -14,13 +14,29 @@ export default function renderBible(){
             const Name = (res.data.text)
         });
     }, [])
+
+    const getBible = event =>{
+        axios.get(`https://bible-api.com/${event.target.value}`).then((res) => {
+            setText(res.data);
+            console.log(res.data.verses)
+            const Name = (res.data.text)
+        });
+    }
+
+    
 return(
     <>
     <Nav/>
+     
+   
     <div>
-        
+        <form className=".textContainer" onSubmit={()=>getBible()}>
+    <input id ='search' onChange={getBible}></input>
+        <button type = 'submit' id="searchBtn" >search</button>
+        </form>
+       
     {text.verses?.map((data)=>(
-        <h1>{data.text}</h1>
+        <h1 id = 'text'>{data.text}</h1>
         
     ))}
     </div>

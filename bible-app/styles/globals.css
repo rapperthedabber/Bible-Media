@@ -249,7 +249,32 @@ padding: 2px;
 
 
  }
+ 
+ .textContainer{
+ display: block;
+ }
+ form{
+  display: flex;
+  margin: 100px;
+  flex-wrap: wrap;
+}
+#search{
+display: flex;
+margin: 20px;
+padding:20px;
+width: 800px;
+position: relative;
+}
 
+
+#searchBtn{
+  background-color: green;
+  position: absolute;
+  float: right;
+  display: flex;
+  margin-right: 200px;
+  
+}
 
  #musicImage{
   width: 200px;
@@ -266,7 +291,12 @@ padding: 2px;
   text-align: center;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
  }
- 
+ #text{
+  color: white;
+  margin: 20px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+ }
  @media screen and (max-width: 600px) {
   #introImage{
     background-color: wheat;
