@@ -297,6 +297,50 @@ position: relative;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 
  }
+
+ .audioContainer{
+display: block;
+display: flex;
+width: 100%;
+overflow: auto;
+height: 100px;
+position: fixed;
+border: solid;
+margin-top: 500px;
+background-color: white;
+margin: 20px;
+ }
+ #audioRange{
+  margin-left: 100px;
+  --seek-before-width: 100px;
+position: relative;
+  
+  outline: none;
+ }
+
+ #time{
+  display: flex;
+ margin-left: 100px;
+ margin-top: 30px;
+ }
+
+ #audioRange::before{
+content:'';
+height: 11px;
+width: var(--seek-before-width);
+ }
+
+ 
+ #audioPlay{
+  border: none;
+ display: flex;
+ margin: 10px;
+ cursor: pointer;
+ align-items: center;
+ padding: 20px;
+  width: 60px;
+  height: 60px;
+ }
  @media screen and (max-width: 600px) {
   #introImage{
     background-color: wheat;

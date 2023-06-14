@@ -1,4 +1,5 @@
 import Nav from "@/components/newNav"
+import Audio from "@/components/Audio"
 export default function Home() {
     const musicArray = [{
         img: 'https://flxt.tmsimg.com/assets/p17982572_b_v10_aa.jpg',
@@ -33,8 +34,7 @@ export default function Home() {
                     </div>
                 ))}
             </div>
-            <footer>
-            </footer>
+           <Audio />
         </>
 
     )

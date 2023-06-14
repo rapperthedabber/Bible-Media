@@ -16,7 +16,7 @@ export default function renderBible(){
     }, [])
 
     const getBible = event =>{
-        axios.get(`https://bible-api.com/${event.target.value}`).then((res) => {
+       axios.get(`https://bible-api.com/${event.target.value}`).then((res) => {
             setText(res.data);
             console.log(res.data.verses)
             const Name = (res.data.text)
@@ -31,8 +31,8 @@ return(
    
     <div>
         <form className=".textContainer" onSubmit={()=>getBible()}>
-    <input id ='search' onChange={getBible}></input>
-        <button type = 'submit' id="searchBtn" >search</button>
+    <input id ='search' onChange={getBible} placeholder="Ex. John 1:2"></input>
+        {/* <button type = 'submit' id="searchBtn" >search</button> */}
         </form>
        
     {text.verses?.map((data)=>(
