@@ -18,6 +18,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "webpack.config.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "webpack.config.js", "components/Audio.tsx", "components/body.tsx", "pages/Listen/[...Listen].tsx"],
   "exclude": ["node_modules"]
 }

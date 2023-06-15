@@ -1,9 +1,10 @@
 import Nav from "@/components/newNav";
 import { useState } from "react"
 import { useEffect } from "react"
+import Audio from "@/components/Audio";
 import axios from "axios";
 export default function renderBible(){
-
+    
     
     const [text, setText] = useState([])
 
@@ -27,6 +28,7 @@ export default function renderBible(){
 return(
     <>
     <Nav/>
+    <Audio />
      
    
     <div>
@@ -39,7 +41,9 @@ return(
         <h1 id = 'text'>{data.text}</h1>
         
     ))}
+    
     </div>
+    
     </>
 
 

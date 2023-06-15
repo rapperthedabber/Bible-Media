@@ -341,6 +341,23 @@ width: var(--seek-before-width);
   width: 60px;
   height: 60px;
  }
+
+ #backThirty{
+  position: absolute;
+  display: flex;
+  width: 40px;
+margin-left: 200px;
+margin-top: 20px;
+  
+ }
+
+ #forwardThirty{
+  display: flex;
+  width: 40px;
+  font-size: 15px;
+  margin-left: 420px;
+  margin-top: 20px;
+ }
  @media screen and (max-width: 600px) {
   #introImage{
     background-color: wheat;
