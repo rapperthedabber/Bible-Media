@@ -41,10 +41,10 @@ const Audio = () => {
 
     const calculate = (secs) => {
         const minutes = Math.floor(secs / 60);
-        const returnMinutes = minutes < 10 ? `0${minutes}` : `${minutes}`
+        const returnedMinutes = minutes < 10 ? `0${minutes}` : `${minutes}`;
         const seconds = Math.floor(secs % 60);
-        const returnSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`
-        return `${returnMinutes} : ${returnSeconds}`
+        const returnedSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`;
+        return `${returnedMinutes}:${returnedSeconds}`;
     }
 
     
@@ -52,13 +52,15 @@ const Audio = () => {
     const whilePlaying = () => {
         progressBar.current.value = bibleAudio?.current?.currentTime
         progressBar.current.style.setProperty('--seek-before-width', `${progressBar.current.value / duration * 100}`)
-        setCurrentTime()
+        changePlayerCurrentTime()
         animationRef.current = requestAnimationFrame(whilePlaying)
     }
     const changeRange = () => {
         bibleAudio.current.currentTime = progressBar.current.value;
-        progressBar.current.style.setProperty('--seek-before-width', `${progressBar.current.value / duration * 100}`)
         changePlayerCurrentTime()
+        progressBar.current.style.setProperty('--seek-before-width', `${progressBar.current.value / duration * 100}`)
+      
+       
     }
 
     const changePlayerCurrentTime = () =>{
