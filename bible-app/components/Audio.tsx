@@ -8,7 +8,8 @@ import { BsFillCaretRightFill } from 'react-icons/bs'
 import { BsPauseCircleFill } from 'react-icons/bs'
 
 
-const Audio = () => {
+const Audio = (props) => {
+   console.log(props)
    
     const [isPlaying, setisPlaying] = useState(false)
     const [duration, setDuration] = useState(0)
@@ -80,9 +81,9 @@ const Audio = () => {
     
  
     return (
-        <div className='audioContainer' >
+        <div className='audioContainer'  >
             {/* <audio></audio> */}
-            <audio ref={bibleAudio} src='http://kjv.wordfree.net/bibles/app/audio/1/1/1.mp3'></audio>
+            <audio ref={bibleAudio} src= {props.src} key ={props.key}></audio>
             <h1 id='time' >{ calculate(_currentTime) }</h1>
             <button id = 'backThirty' onClick={backThirty}>-30</button>
             <button id = 'forwardThirty' onClick= {forwardThirty}>+30</button>
