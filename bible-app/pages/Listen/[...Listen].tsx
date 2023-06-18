@@ -8,59 +8,71 @@ export default function Home() {
         img: 'https://flxt.tmsimg.com/assets/p17982572_b_v10_aa.jpg',
         name: 'The Bible Podcast',
         episode: ' Genesis',
-        audio:'http://kjv.wordfree.net/bibles/app/audio/1/1/1.mp3'
+        audio: 'http://kjv.wordfree.net/bibles/app/audio/1/1/1.mp3'
 
     },
     {
-        id:2,
+        id: 2,
         img: 'https://m.media-amazon.com/images/M/MV5BMmMwZDZlZjAtMjY1YS00ZTEzLThhOWQtNGQ1ZTZiMzRiZDQxXkEyXkFqcGdeQXVyNjc1NjkyMjE@._V1_.jpg',
         name: '',
         episode: 'Exodus',
         audio: 'https://www.wordpocket.org/bibles/app/audio/1/2/1.mp3'
     },
     {
-        id:3,
+        id: 3,
         img: 'https://m.media-amazon.com/images/M/MV5BMmMwZDZlZjAtMjY1YS00ZTEzLThhOWQtNGQ1ZTZiMzRiZDQxXkEyXkFqcGdeQXVyNjc1NjkyMjE@._V1_.jpg',
         name: 'the Chosen',
         episode: 'John',
-        audio:'https://www.wordpocket.org/bibles/app/audio/1/43/1.mp3'
+        audio: 'https://www.wordpocket.org/bibles/app/audio/1/43/1.mp3'
     },
     {
-        id:4,
+        id: 4,
         img: 'https://m.media-amazon.com/images/M/MV5BMmMwZDZlZjAtMjY1YS00ZTEzLThhOWQtNGQ1ZTZiMzRiZDQxXkEyXkFqcGdeQXVyNjc1NjkyMjE@._V1_.jpg',
         name: 'the Chosen',
         episode: 'Job',
-        audio:'https://www.wordpocket.org/bibles/app/audio/1/18/1.mp3'
+        audio: 'https://www.wordpocket.org/bibles/app/audio/1/18/1.mp3'
     }]
-const [audio, setAudio] = useState(false)
-function showSound(data, event){
-for(let i =0; i<= musicArray.length; i++){
-    if(  data === 1){
-        return setAudio(true)
+    const [audio, setAudio] = useState(false)
+    function showSound(data, event) {
+        for (let i = 0; i <= musicArray.length; i++) {
+            if (data === 1) {
+                return setAudio(true)
 
-    }else if(data === 2){
-        return setAudio(true)
-    }else{
-        return setAudio(false)
+            } else if (data === 2) {
+                return setAudio(true)
+            }
+            else if (data === 3) {
+                return setAudio(true)
+            }
+            else if (data === 4) {
+                return setAudio(true)
+            }
+        else {
+            return setAudio(false)
+        }
     }
-}
-    
-}
-    return (
-        <>
-            <Nav />
-            <div className="music">
-                {musicArray.map((data) => (
-                    <div className="musicContainer">
-                        <img id='musicImage' src={data.img}  key = {data.id} onClick={()=>showSound(data.id) }></img>
-                        <h2 id="episode">{data.episode}</h2>
-                       {audio ? <Audio src = {data.audio} key = {data.id}  />: null}
-                    </div>
-                       
-                ))}
-            </div>
-       
-        </>
 
-    )
+}
+
+const checkClick = (event) => {
+
+    setAudio(prevState => !prevState)
+}
+return (
+    <>
+        <Nav />
+        <div className="music">
+            {musicArray.map((data) => (
+                <div className="musicContainer" key ={data.id} onClick={() => showSound(data.id)} onClick={() => checkClick()}>
+                    <img id='musicImage' src={data.img} key={data.id}></img>
+                    <h2 id="episode">{data.episode}</h2>
+                    {audio ? <Audio src={data.audio} key={data.id}  showSound={audio}/> : null}
+                </div>
+
+            ))}
+        </div>
+
+    </>
+
+)
 }

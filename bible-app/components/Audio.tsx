@@ -83,9 +83,10 @@ const Audio = (props) => {
     
       const [showAudio, setShowAudio] = useState<boolean>(false)
  
-    return (
-        <div className='audioContainer'>
-            <audio ref={bibleAudio} src= {props.src} key ={props.key} ></audio>
+   return  (
+       
+        <div className='audioContainer' key = {props.key} >
+            <audio ref={bibleAudio} src= {props.src} ></audio>
             <h1 id='time' >{ calculate(_currentTime) }</h1>
             <button id = 'backThirty' onClick={backThirty}>-30</button>
             <button id = 'forwardThirty' onClick= {forwardThirty}>+30</button>
@@ -95,8 +96,11 @@ const Audio = (props) => {
                 {isPlaying ? <BsPauseCircleFill /> :<BsFillCaretRightFill /> }
             </button>
         </div>
-    )
-}
-export default Audio;
+    ) 
+
+   }
+   export default Audio;
+
+
 
 

@@ -3,7 +3,7 @@ import gitHub from '../Images/icons8-github-100.png'
 export default function body(){
     const router = useRouter()
  function renderPage(){
-    router.push('/Home/Home')
+    router.push('/Listen/Listen')
  }
 
 return(
