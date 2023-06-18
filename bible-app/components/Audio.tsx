@@ -9,6 +9,8 @@ import { BsPauseCircleFill } from 'react-icons/bs'
 
 
 const Audio = (props) => {
+
+
    console.log(props)
    
     const [isPlaying, setisPlaying] = useState(false)
@@ -79,11 +81,11 @@ const Audio = (props) => {
       }
     
     
+      const [showAudio, setShowAudio] = useState<boolean>(false)
  
     return (
-        <div className='audioContainer'  >
-            {/* <audio></audio> */}
-            <audio ref={bibleAudio} src= {props.src} key ={props.key}></audio>
+        <div className='audioContainer'>
+            <audio ref={bibleAudio} src= {props.src} key ={props.key} ></audio>
             <h1 id='time' >{ calculate(_currentTime) }</h1>
             <button id = 'backThirty' onClick={backThirty}>-30</button>
             <button id = 'forwardThirty' onClick= {forwardThirty}>+30</button>

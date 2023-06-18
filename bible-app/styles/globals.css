@@ -304,7 +304,7 @@ display: flex;
 width: 100%;
 overflow: auto;
 height: 100px;
-position: fixed;
+/* position: fixed; */
 border: solid;
 margin-top: 500px;
 background-color: white;

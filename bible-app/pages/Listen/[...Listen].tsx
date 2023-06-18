@@ -32,17 +32,29 @@ export default function Home() {
         episode: 'Job',
         audio:'https://www.wordpocket.org/bibles/app/audio/1/18/1.mp3'
     }]
+const [audio, setAudio] = useState(false)
+function showSound(data, event){
+for(let i =0; i<= musicArray.length; i++){
+    if(  data === 1){
+        return setAudio(true)
 
-    const [showAudio, setShowAudio] = useState()
+    }else if(data === 2){
+        return setAudio(true)
+    }else{
+        return setAudio(false)
+    }
+}
+    
+}
     return (
         <>
             <Nav />
             <div className="music">
                 {musicArray.map((data) => (
                     <div className="musicContainer">
-                        <img id='musicImage' src={data.img}  key = {data.id} onClick={()=>setShowAudio()}></img>
+                        <img id='musicImage' src={data.img}  key = {data.id} onClick={()=>showSound(data.id) }></img>
                         <h2 id="episode">{data.episode}</h2>
-                        <Audio src = {data.audio} key = {data.id}/>
+                       {audio ? <Audio src = {data.audio} key = {data.id}  />: null}
                     </div>
                        
                 ))}
