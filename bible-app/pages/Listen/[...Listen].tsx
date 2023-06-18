@@ -63,8 +63,8 @@ return (
         <Nav />
         <div className="music">
             {musicArray.map((data) => (
-                <div className="musicContainer" key ={data.id} onClick={() => showSound(data.id)} onClick={() => checkClick()}>
-                    <img id='musicImage' src={data.img} key={data.id}></img>
+                <div className="musicContainer" >
+                    <img id='musicImage' src={data.img} key={data.id} key ={data.id} onClick={() => showSound(data.id)} onClick={() => checkClick()}></img>
                     <h2 id="episode">{data.episode}</h2>
                     {audio ? <Audio src={data.audio} key={data.id}  showSound={audio}/> : null}
                 </div>
