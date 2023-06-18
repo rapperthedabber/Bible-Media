@@ -27,25 +27,21 @@ export default function renderBible(){
     
 return(
     <>
-    <Nav/>
-    <Audio />
+ 
      
    
-    <div>
-        <form className=".textContainer" onSubmit={()=>getBible()}>
+    <div className="bibleBox" >
+        <form onSubmit={()=>getBible()}>
     <input id ='search' onChange={getBible} placeholder="Ex. John 1:2"></input>
         {/* <button type = 'submit' id="searchBtn" >search</button> */}
         </form>
-       
+    <div  className="wordContainer">
     {text.verses?.map((data)=>(
         <h1 id = 'text'>{data.text}</h1>
         
     ))}
+    </div>
     
     </div>
     
-    </>
-
-
-)
-}
+    </>)}

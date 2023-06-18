@@ -9,7 +9,7 @@ router.push('/Bible/Bible')
     }
     return(
         <nav>
-              <a href ='#About' onClick={()=>Listen()}> Listen</a>
+              
                 <a href = '#Intro5' onClick={()=>{Bible()}}>Read</a>
         </nav>
     )

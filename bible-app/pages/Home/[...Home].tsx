@@ -1,4 +1,5 @@
 import Nav from "@/components/newNav"
+import renderBible from 
 export default function Home() {
     const musicArray = [{
         img: 'https://flxt.tmsimg.com/assets/p17982572_b_v10_aa.jpg',

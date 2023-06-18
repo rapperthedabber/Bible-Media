@@ -31,6 +31,7 @@ a{
 }
 .bibleContainer{
   border-radius: 20px;
+
   position: relative;
 
   
@@ -230,8 +231,10 @@ padding: 2px;
 
 
  .musicContainer{
-  display: block;
+  display: flex;
   float: right;
+  flex-direction: column;
+  position: relative;
   margin: 20px;
   background-color: lightslategray;
   opacity: 0.7;
@@ -240,7 +243,8 @@ padding: 2px;
 
  }
  .musicContainer:hover{
-  display: block;
+  
+  display: flex;
   float: right;
   margin: 20px;
   background-color: lightgrey;
@@ -250,17 +254,16 @@ padding: 2px;
 
  }
  
- .textContainer{
- display: block;
- }
+
  form{
   display: flex;
-  margin: 100px;
+  margin: 10px;
   flex-wrap: wrap;
 }
 #search{
 display: flex;
-margin: 20px;
+margin: 2px;
+margin-top: 0;
 padding:20px;
 width: 800px;
 position: relative;
@@ -291,11 +294,29 @@ position: relative;
   text-align: center;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
  }
+
+ .wordContainer{
+  width: 400px;
+  height: 300px;
+  display: block;
+  margin: 0px;
+
+  position: fixed;
+  overflow: scroll;
+  overflow-x: hidden;
+ }
  #text{
   color: white;
   margin: 20px;
+  width: 200px;
+  height: 200px;
+  
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 
+ }
+
+ .bibleBox{
+ display: block;
  }
 
  .audioContainer{

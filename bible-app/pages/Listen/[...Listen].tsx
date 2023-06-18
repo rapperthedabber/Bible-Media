@@ -2,6 +2,7 @@ import Nav from "@/components/newNav"
 import Audio from "@/components/Audio"
 import { useState } from "react"
 import { useEffect } from "react"
+import Bible from "@/components/Bible"
 export default function Home() {
     const musicArray = [{
         id: 1,
@@ -36,6 +37,10 @@ export default function Home() {
     function showSound(data, event) {
         for (let i = 0; i <= musicArray.length; i++) {
             if (data === 1) {
+                musicArray.filter(function(music){
+                    if(music[i].id > 1){
+                        return setAudio(false)
+                    }})
                 return setAudio(true)
 
             } else if (data === 2) {
@@ -62,14 +67,18 @@ return (
     <>
         <Nav />
         <div className="music">
+         
             {musicArray.map((data) => (
                 <div className="musicContainer" >
                     <img id='musicImage' src={data.img} key={data.id} key ={data.id} onClick={() => showSound(data.id)} onClick={() => checkClick()}></img>
                     <h2 id="episode">{data.episode}</h2>
                     {audio ? <Audio src={data.audio} key={data.id}  showSound={audio}/> : null}
+                 
                 </div>
+                  
 
             ))}
+             <Bible />
         </div>
 
     </>
