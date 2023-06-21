@@ -21,7 +21,7 @@ const Audio = (props) => {
     const animationRef = useRef()
  
     const togglePlay = () => {
-       
+       props.musicArray.filter <any>(music => music !== props.src)
         const preValue = isPlaying
         setisPlaying(!preValue)
         if (!preValue) {
@@ -85,14 +85,14 @@ const Audio = (props) => {
  
    return  (
        
-        <div className='audioContainer' key = {props.key} >
-            <audio ref={bibleAudio} src= {props.src} ></audio>
-            <h1 id='time' >{ calculate(_currentTime) }</h1>
-            <button id = 'backThirty' onClick={backThirty}>-30</button>
-            <button id = 'forwardThirty' onClick= {forwardThirty}>+30</button>
-            <input type='range' id='audioRange' ref={progressBar} onChange={changeRange}></input>
+        <div className='audioContainer' key = {props.key}  >
+            <audio ref={bibleAudio} src= {
+                props.src} key = {props.key} ></audio>
+            <h1 id='time' key={props.key}>{ calculate(_currentTime) }</h1>
+            <button id = 'backThirty' onClick={backThirty}  key={props.key}>-30</button>
+            <input type='range' id='audioRange' ref={progressBar} onChange={changeRange}  key={props.key}></input>
             {/* <div>{}</div> */}
-            <button id='audioPlay' onClick={togglePlay}>
+            <button id='audioPlay' onClick={togglePlay}  key={props.key}>
                 {isPlaying ? <BsPauseCircleFill /> :<BsFillCaretRightFill /> }
             </button>
         </div>
