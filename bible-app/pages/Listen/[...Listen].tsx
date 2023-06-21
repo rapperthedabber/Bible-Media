@@ -56,8 +56,17 @@ export default function Home() {
 
 }
 
-const checkClick = (data) => {
-    setAudio(prevState => !prevState) 
+const checkClick = (event, data) => {
+    console.log(data)
+    console.log(event)
+    console.log(data === event)
+    if(event === data){
+        setAudio(prevState => !prevState) 
+    }
+    
+      
+    
+    
     
 }
 return (
@@ -65,12 +74,12 @@ return (
         <Nav />
         <div className="music">
          
-            {musicArray.map((data) => (
+            {musicArray.filter(data=>data.audio).map((data) => (
                 <div className="musicContainer" >
                     <img id='musicImage' src={data.img} key={data.id}  onClick={() => showSound(data.id, data.src)} onClick={() => checkClick(data.id)}></img>
                     <h2 id="episode">{data.episode}</h2>
                     {musicArray?.data?.filter(music => music != data.audio)}
-                    {audio && data? <Audio src={data.audio} key={data.id}  showSound={audio} musicArray = {musicArray}/> : null}
+                    {audio && data? <Audio src={data.audio} key={data.id}  showSound={audio} musicArray = {musicArray} /> : null}
                   
                 </div>
                   
