@@ -21,6 +21,7 @@ p {
 nav{
   background-color: white;
   height: 50px;
+  width: 100%;
   font-size: large;
   font-weight: bolder;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
@@ -229,6 +230,9 @@ padding: 2px;
 
  }
 
+ .musicBox{
+
+ }
 
  .musicContainer{
   display: flex;
@@ -238,7 +242,7 @@ padding: 2px;
   margin: 20px;
   background-color: lightslategray;
   opacity: 0.7;
-  border-radius: 20px;
+ box-shadow: 10px 5px 5px black;
 
 
  }
@@ -257,16 +261,18 @@ padding: 2px;
 
  form{
   display: flex;
-  margin: 10px;
+  margin: 0px;
   flex-wrap: wrap;
 }
 #search{
 display: flex;
 margin: 2px;
-margin-top: 0;
+margin: 20px;
+
 padding:20px;
 width: 800px;
 position: relative;
+
 }
 
 
@@ -299,13 +305,15 @@ position: relative;
  .wordContainer{
   width: 400px;
   height: 300px;
-  display: block;
-  margin: 10px;
+margin: 50px;
+  margin-bottom: 100px;
+  
+ 
+ 
 background-color: white ;
 mix-blend-mode:hard-light;
 opacity: 0.7;
 border-radius: 20px;
-  position: fixed;
   overflow: scroll;
   overflow-x: hidden;
  }
@@ -322,7 +330,11 @@ font-weight: bolder;
  display: block;
 
  }
+#playImg{
+display: flex;
+width: 100px;
 
+}
  .audioContainer{
 display: block;
 display: flex;
@@ -360,6 +372,7 @@ width: var(--seek-before-width);
   border: none;
  display: flex;
  margin: 10px;
+ margin-left: 100px;
  cursor: pointer;
  align-items: center;
  padding: 20px;
@@ -371,7 +384,7 @@ width: var(--seek-before-width);
   position: absolute;
   display: flex;
   width: 40px;
-margin-left: 200px;
+margin-left: 250px;
 margin-top: 20px;
   
  }
@@ -396,6 +409,7 @@ margin-top: 20px;
     height: 400px;
    
   }
+
   
 #Intro{
   color: whitesmoke;
@@ -480,6 +494,10 @@ padding: 2px;
 
  }
 
+ #search{
+  width: 100%;
+ }
+
  button:hover{
   background-color: white;
   display: flex;;
@@ -495,7 +513,10 @@ padding: 2px;
  display: flex;
  opacity: 1;
  }
+ .wordContainer{
+  margin-top: 20px;
  
+ }
 
 #Intro4{
   color: black;
@@ -524,6 +545,58 @@ border: solid;
 border: solid;
 }
 
+.audioContainer{
+  width: 420px;
+}
+#audioRange{
+  margin-left: 80px;
+  --seek-before-width: 100px;
+position: relative;
+  
+  outline: none;
+ }
+
+ #time{
+  display: flex;
+ margin-left: 59px;
+ margin-top: 30px;
+ }
+
+ #audioRange::before{
+content:'';
+height: 11px;
+width: var(--seek-before-width);
+ }
+
+ 
+ #audioPlay{
+  border: none;
+ display: flex;
+ margin: 10px;
+ margin-left: 100px;
+ cursor: pointer;
+ align-items: center;
+ padding: 20px;
+  width: 60px;
+  height: 60px;
+ }
+
+ #backThirty{
+  position: absolute;
+  display: flex;
+  width: 40px;
+margin-left: 210px;
+margin-top: 20px;
+  
+ }
+
+ #forwardThirty{
+  display: flex;
+  width: 40px;
+  font-size: 15px;
+  margin-left: 420px;
+  margin-top: 20px;
+ }
 #Intro6{
   color: black;
   font-weight: 600px;
@@ -550,6 +623,43 @@ margin-right: 400px;
 
 
 }
+.music{
+ 
+  display: grid;
+ grid-template-rows: auto auto auto;
+
+}
+
+.musicContainer{
+  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  float:left;
+  width: 170px;
+  position: absolute;
+  margin: 20px;
+  background-color: lightslategray;
+  opacity: 0.7;
+  position: relative;
+ 
+ 
+
+
+ }
+ .musicContainer:hover{
+  
+  display: flex;
+  float: left;
+  
+ 
+  margin: 20px;
+  background-color: lightgrey;
+  cursor: pointer;
+  opacity: 1;
+
+
+ }
+ 
 
 
 Footer{

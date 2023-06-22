@@ -9,7 +9,7 @@ import { BsFillCaretRightFill } from 'react-icons/bs'
 import { BsPauseCircleFill } from 'react-icons/bs'
 
 
-const Audio = () => {
+const Audio = (props) => {
 
 
 
@@ -102,6 +102,7 @@ const Audio = () => {
 
            {getAudio?.map((data)=>(
             <div className='audioContainer'  >
+                <img  id ="playImg" src={data.img}></img>
             <audio ref={bibleAudio} src={data.audio}  ></audio>
             <h1 id='time' >{calculate(_currentTime)}</h1>
             <button id='backThirty' onClick={backThirty} >-30</button>
