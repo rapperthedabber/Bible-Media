@@ -326,12 +326,12 @@ font-weight: bolder;
  .audioContainer{
 display: block;
 display: flex;
-width: 200px;
+width: 100%;
 overflow: auto;
 height: 100px;
 /* position: fixed; */
 border: solid;
-margin-top: 500px;
+margin-top: 800px;
 background-color: white;
 margin: 20px;
  }
