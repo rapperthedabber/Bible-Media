@@ -111,8 +111,8 @@ return (
             {musicArray.filter(data=>data.audio).map((data) => (
                 <div className="musicContainer" >
                     <img id='musicImage' src={data.img} key={data.id}  onClick={() => showSound(data.id, data.src)} onClick={() => checkClick(data.id, data.img, data.name,data.episode, data.audio  )}></img>
-                    <h2 id="episode">{data.episode}</h2>
-                    {musicArray?.data?.filter(music => music != data.audio)}
+                    <h2 id="episode" key ={data.id}>{data.episode}</h2>
+                    {/* {musicArray?.data?.filter(music => music != data.audio)} */}
                    
                   
                 </div>
