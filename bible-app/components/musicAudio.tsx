@@ -8,8 +8,7 @@ import axios from "axios"
 import { BsFillCaretRightFill } from 'react-icons/bs'
 import { BsPauseCircleFill } from 'react-icons/bs'
 
-
-const Audio = () => {
+const Music = () => {
 
 
 
@@ -22,7 +21,7 @@ const Audio = () => {
     const [getAudio, setGetAudio] = useState([])
 
     useEffect(() => {
-        axios.get('/api/getAudio').then((res) => {
+        axios.get('/api/getMusic').then((res) => {
             setGetAudio(res.data);
             console.log(res)
             const Name = (res.data.Name)
@@ -103,7 +102,7 @@ const Audio = () => {
            {getAudio?.map((data)=>(
             <div className='audioContainer'  >
                 <img  id ="playImg" src={data.img}></img>
-            <audio ref={bibleAudio} src={data.audio}  ></audio>
+            <audio ref={bibleAudio} src={data.music}  ></audio>
             <h1 id='time' >{calculate(_currentTime)}</h1>
             <button id='backThirty' onClick={backThirty} >-30</button>
             <input type='range' id='audioRange' ref={progressBar} onChange={changeRange}></input>
@@ -122,7 +121,7 @@ const Audio = () => {
     )
 
 }
-export default Audio;
+export default Music;
 
 
 

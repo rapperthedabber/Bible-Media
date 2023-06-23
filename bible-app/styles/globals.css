@@ -19,12 +19,30 @@ p {
 
 }
 nav{
-  background-color: white;
+  display: flex;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
   height: 50px;
   width: 100%;
+  height: 400px;
   font-size: large;
   font-weight: bolder;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+
+  50% {
+      background-position: 100% 50%;
+  }
+
+  100% {
+      background-position: 0% 50%;
+  }
 }
 
 a{
@@ -50,6 +68,17 @@ background-size: cover;
   height: 400px;
  
  
+
+}
+
+#Heading{
+  display: inline-block;
+  font-size: 95px;
+  margin-left: 30px;
+  width: 1000px;
+  float: auto;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  color: black
 
 }
 
@@ -88,6 +117,9 @@ margin-left: 400px;
   float: right;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   
+}
+.navContainer{
+  display: flex;
 }
 
 
@@ -334,6 +366,26 @@ font-weight: bolder;
 display: flex;
 width: 100px;
 
+
+}
+
+#Listen{
+  display: flex;
+  color: white;
+  display: block;
+  font-size: 30px;
+ position: static;
+  margin: 
+
+}
+
+#listenLink{
+  color: white;
+}
+
+#listenLink:hover{
+  color: white;
+  text-decoration: underline;
 }
  .audioContainer{
 display: block;
@@ -351,10 +403,16 @@ margin: 20px;
   margin-left: 100px;
   --seek-before-width: 100px;
 position: relative;
-  
+  width: 500px;
   outline: none;
  }
+#godIcon{
 
+  width: 400px;
+  height: 400px;
+
+
+}
  #time{
   display: flex;
  margin-left: 100px;
@@ -518,6 +576,26 @@ padding: 2px;
  
  }
 
+ #playImg{
+  width: 20px;
+ }
+ #Listen{
+  margin:0
+ }
+ nav{
+  display: flex;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+  height: 50px;
+  width: 100%;
+  height: 400px;
+  font-size: large;
+  font-weight: bolder;
+
+ }
+
 #Intro4{
   color: black;
   font-weight: 600px;
@@ -552,7 +630,7 @@ border: solid;
   margin-left: 80px;
   --seek-before-width: 100px;
 position: relative;
-  
+  width: 100px;
   outline: none;
  }
 
@@ -568,6 +646,9 @@ height: 11px;
 width: var(--seek-before-width);
  }
 
+ #Heading{
+  font-size: 50px;
+ }
  
  #audioPlay{
   border: none;
@@ -646,6 +727,10 @@ margin-right: 400px;
 
 
  }
+
+ #playImg{
+  width: 100px;
+ }
  .musicContainer:hover{
   
   display: flex;
@@ -660,7 +745,33 @@ margin-right: 400px;
 
  }
  
+#Listen{
+  font-size: 20px;
+}
 
+nav{
+  display: flex;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+  height: 50px;
+  width: 100%;
+  height: 400px;
+  font-size: large;
+  font-weight: bolder;
+
+ }
+
+#godIcon{
+ 
+  margin-top: 150px;
+ margin-left: -170px;
+  height: 250px;
+  width: 500px;
+ 
+  display: flex;
+}
 
 Footer{
   background-color: wheat;
