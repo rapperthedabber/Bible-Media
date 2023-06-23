@@ -45,6 +45,14 @@ nav{
   }
 }
 
+#twoHeading{
+  font-size: 30px;
+  color: white;
+  margin-top: 200px;
+  margin-left: -800px;
+
+}
+
 a{
   margin: 20px;
 }
@@ -665,6 +673,10 @@ padding: 2px;
 
  }
 
+ #text{
+  color: black;
+  font-weight: bolder;
+ }
 #Intro4{
   color: black;
   font-weight: 600px;
@@ -825,7 +837,7 @@ nav{
   animation: gradient 15s ease infinite;
   height: 100vh;
   height: 50px;
-  width: 100%;
+  width: 500px;
   height: 400px;
   font-size: large;
   font-weight: bolder;
