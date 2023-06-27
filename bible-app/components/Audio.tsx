@@ -9,7 +9,7 @@ import { BsFillCaretRightFill } from 'react-icons/bs'
 import { BsPauseCircleFill } from 'react-icons/bs'
 
 
-const Audio = () => {
+export default function Audio() {
 
 
 
@@ -90,12 +90,7 @@ const Audio = () => {
     }
 
 
-    const [showAudio, setShowAudio] = useState<boolean>(false)
-    const playAudio =()=>{
-        axios.get('/api/getAudio').then((res)=>{
-            return res.audio
-        })
-    }
+
 
     return (
         <>
@@ -122,7 +117,7 @@ const Audio = () => {
     )
 
 }
-export default Audio;
+
 
 
 
