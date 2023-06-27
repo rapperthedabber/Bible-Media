@@ -122,7 +122,7 @@ return (
             ))}
             </div>
         
-             <Bible renderBible = {renderBible} />
+             {/* <Bible renderBible = {renderBible} /> */}
              <Audio  /> 
         </div>
 
