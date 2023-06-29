@@ -14,4 +14,24 @@ No matter where you are on your spiritual path, Breath is your companion for gro
 
 ![image](https://github.com/rapperthedabber/Bible-Media/assets/116526260/db75a859-1dc4-4c73-a749-090685643056)
 
+-[User Story](#User)<br> 
+-[Installation](#installation)<br>
+-[Usage](#usage)<br>
+-[Technologies](#technologies)<br>
+-[Credits](#credits)<br>
+
+
+# Installation
+Does not require users to install anything.
+
+# Technologies
+This application uses Next.js (frontend) and MongoDB Atlas (backend) in order to make the application function. 
+
+# Credits
+Jerry Dong: https://github.com/rapperthedabber/
+
+
+
+
+
 
