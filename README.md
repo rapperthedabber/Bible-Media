@@ -12,5 +12,6 @@ Breath boasts a user-friendly interface, allowing you to navigate seamlessly thr
 
 No matter where you are on your spiritual path, Breath is your companion for growth, worship, and reflection. Download the app today and let the harmonious blend of audiobooks and worship music ignite your faith, deepen your understanding, and create a space for spiritual connection like never before.
 
+![image](https://github.com/rapperthedabber/Bible-Media/assets/116526260/db75a859-1dc4-4c73-a749-090685643056)
 
 
